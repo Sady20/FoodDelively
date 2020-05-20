@@ -1,0 +1,47 @@
+header{
+     text-align: center;  
+}
+.nav{
+    
+    display: felx;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 70px;
+    background-color:#8EC63F;
+    color:white;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+a:hover {
+    background-color: #97DB12;
+    border-radius: 10%;
+}
+.logo{
+    border-radius: 50%;    
+    width: 70px;
+    height: 70px;
+       
+}
+.topBar{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8em;
+    line-height: 2em;
+    z-index: 2;
+}
+.fa-clock-o, .fa-mobile{
+    margin-right: 5px;
+}
+.spanTopBar{
+    margin-right: 20px;
+}
+
+.fa-facebook-official, .fa-twitter, .fa-instagram{    
+    margin-right: 20px;
+}

@@ -1,0 +1,71 @@
+
+.posSlid{
+  position: relative;
+  border: 2px solid red;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.posDiv{
+  position: relative;
+  border: 2px solid red;
+}
+
+.MySLidImg{
+margin-right: auto;
+margin-left:auto ;
+height: 90%;
+width: 100%;  
+    border: 2px solid green;
+   
+}
+.arrow{
+  border: 2px solid blue;
+}
+
+
+.prevArrow{
+  /*display:inline;
+  position: absolute;
+  top:50%;
+  left:30px;  */
+  /*
+  display: block;
+  float:left;
+  margin-left:30px;
+  margin-top: 18%;
+  z-index: 2;*/
+
+  background-color:green;
+  border-radius: 50%;
+  cursor: pointer; 
+
+}
+.nextArrow{
+  display:inline;
+  position: absolute;
+  top:50%;
+  right:30px;  
+  background-color: #f1f1f1;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer; 
+
+}
+.prevArrow:hover, .nextArrow:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.textCaption {
+ /* background-color: rosybrown;*/
+  background-color:hsla(120,50%,1%,0.7);
+  color: rosybrown;
+  
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
