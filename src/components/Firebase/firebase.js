@@ -34,5 +34,19 @@ constructor(){
  passwordReset = email => this.auth.sendPasswordResetEmail(email); 
 
  // firestore
- user = uid => this.db.doc(`users/${uid}`);
+ userMethod = uid => this.db.doc(`usersCol/${uid}`);
+ //userMethod = uid => this.db.ref(`usersCol/${uid}`);
+ //usersMethod = () => this.db.doc('usersCol');
+ //abc : autre methode pour ajouter les utilisateur
+ ajoutMethod  = (email, pseudo,tel,adress) =>this.db.collection('usersCol').add({ 
+  pseudo: pseudo, 
+  email: email, 
+  tel: tel,
+  adress: adress});
+lireMethod =()=>this.db.collection('usersCol').onSnapshot( (snapshot)=>{
+console.log('lireMethode');
+});
+
+
+
 }

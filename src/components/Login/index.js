@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import { FirebaseContext } from '../Firebase'
 
 const Login=(props)=> {
-
-    const contextBase = useContext(FirebaseContext);
+       const contextBase = useContext(FirebaseContext);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -25,7 +24,7 @@ const Login=(props)=> {
      }
 
 
-    return (        <div >    
+    return (        <div  >    
 
                     <h2>Connexion</h2>
                     <form onSubmit={handleSubmit}>

@@ -4,13 +4,15 @@ import {Link} from 'react-router-dom';
 
 const Signup=(props)=> {
 
-    const contextBase = useContext(FirebaseContext);  
+    const contextFireBase = useContext(FirebaseContext);  
     
     const dataInit={
         pseudo: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        tel:'',
+        adress:''
     };
      const [data, setData] = useState(dataInit);
      const [error, setError] = useState('');
@@ -21,8 +23,17 @@ const Signup=(props)=> {
      }
      const handleSubmit=(event)=>{
         event.preventDefault();
-        contextBase.signupUser(data.email, data.password)
-       .then(user=>{    
+        contextFireBase.signupUser(data.email, data.password)
+       /*.then(userAuth=>{
+            return contextFireBase.userMethod(userAuth.user.uid).set({
+                     pseudo: data.pseudo,
+                     email: data.email,
+                     tel: data.tel,
+                     adress: data.adress,
+            });
+       })*/
+      .then (()=>{ return contextFireBase.ajoutMethod( data.pseudo, data.email,data.tel,data.adress );})
+      .then(()=>{    
            setData({...dataInit});
            setError('');
           props.history.push('/welcome');
@@ -43,23 +54,28 @@ const Signup=(props)=> {
                                 <input onChange={handleChange}  value={data.pseudo} type="text" id="pseudo"  required />
                                 <label htmlFor="pseudo">Pseudo</label>
                             </div>
-
                             <div className="inputBox">
                                 <input onChange={handleChange} value={data.email}  type="email" id="email"  required />
                                 <label htmlFor="email">Email</label>
                             </div>
-
+                            <div className="inputBox">
+                                <input onChange={handleChange} value={data.tel}  type="tel" id="tel"  required />
+                                <label htmlFor="tel">Tel</label>
+                            </div>
+                            <div className="inputBox">
+                                <input onChange={handleChange} value={data.adress}  type="text" id="adress"  required />
+                                <label htmlFor="adress">Adress</label>
+                            </div>
                             <div className="inputBox">
                                 <input onChange={handleChange}  value={data.password} type="password" id="password" autoComplete="off" required />
                                 <label htmlFor="password">Mot de passe</label>
                             </div>
-
                             <div className="inputBox">
                                 <input onChange={handleChange} value={data.confirmPassword}  type="password" id="confirmPassword" autoComplete="off" required />
                                 <label htmlFor="confirmPassword">Confirmer le mot de passe</label>
                             </div>
 
-                           { data.pseudo===''||data.email===''||data.password===''||data.password!==data.confirmPassword 
+                           { data.pseudo===''||data.email===''||data.pseudo===''||data.tel===''||data.adress===''||data.password!==data.confirmPassword 
                              ? <button disabled>S'inscrire</button> : <button>S'inscrire</button>}
                         </form>
                         <div >

@@ -1,30 +1,54 @@
 import './list.css';
-import React, {Component} from 'react';
-import Item from './Item' ;
-import imagelink1 from '../../images/restaurant1.png';
-import imagelink2 from '../../images/menu1.jpg';
-import imagelink3 from '../../images/plat1.png';
+import React from 'react';
+import {Container, Row,Col} from 'react-bootstrap';
 
-class List extends Component{
+import imagelink1 from '../../images/restaurant2.png';
+import imagelink2 from '../../images/plat3.png';
+import imagelink3 from '../../images/delivery.png';
 
- render(){
+const  List=(props)=>{
+  //console.log(props.myProps);
+  const handleClick1=()=>{
+    props.myProps.history.push('/restaurants'); 
+  }
+  const handleClick2=()=>{
+    props.myProps.history.push('/meals'); 
+  }
+  const handleClick3=()=>{
+    props.myProps.history.push('/services'); 
+  }
 
   return (
-   <div class="testDIV2">
-     <Item   imagM= {imagelink1} valueH5="Our Restaurants"  
-     valueP="   ipsum dolor sit tempore evenieearum rem. Explicabo, neque! " valueSPAN2="8.50£"/>
-
-     <Item   imagM= {imagelink2} valueH5="Our Menus" 
-     valueP="  P22222 Lorem ipsum dolor sit amet consectetur adipisicing elit. C. Explicabo, neque! " 
-     valueSPAN2="7.60£"/>
-                
-     <Item  imagM= {imagelink3} valueH5="Our Meals " 
-     valueP="  P33333 Lorem ipsum dolor sit amet consectetur mollitia earum rem. Explicabo, neque! " 
-     valueSPAN2="9.00£"/>
-     
-   </div>
+    <Container>
+    <Row>
+    <Col  className="myclass-offer"> 
+                  <img src={imagelink1} alt="ImgRstaurant" className="imgVector"/>
+                  <h6>Our Restaurants</h6>
+                  <p>We provide food from the best Organic restaurants. </p>
+                  <button  onClick={handleClick1} type="button" className="btn btn-success">
+                    Check 
+                  </button>
+    </Col>
+    <Col className="myclass-offer"> 
+                  <img src={imagelink2} alt="ImgMeal" className="imgVector"/>
+                  <h6>Our Meals</h6>
+                  <p>We offer the most delicious Organic meals. </p>
+                  <button onClick={handleClick2} type="button" className="btn btn-success">
+                    Check 
+                  </button>
+    </Col>
+    <Col className="myclass-offer"> 
+                  <img src={imagelink3} alt="ImgDelivery" className="imgVector"/>
+                  <h6>Our Service</h6>
+                  <p>We offer the fastest EcoFrendly delivery. </p>
+                  <button onClick={handleClick3} type="button" className="btn btn-success">
+                    Check 
+                  </button>
+    </Col>
+    </Row>
+    </Container>
   );
-}
+
 
 }
 export default List;

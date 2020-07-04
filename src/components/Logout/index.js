@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { FirebaseContext } from '../Firebase'
 
-const Logout = () => {
+const Logout = (props) => {
+   // console.log(props);
 
-    const contextBase = useContext(FirebaseContext);
+    const contextFireBase = useContext(FirebaseContext);
 
     const [checked, setChecked] = useState(false);
 
     useEffect(() => {
         if (checked) { 
-                        contextBase.signoutUser();             
+            contextFireBase.signoutUser();             
         }
 
-    }, [checked, contextBase]);
+    }, [checked, contextFireBase]);
 
     const handleChange = event => {
         setChecked(event.target.checked);
@@ -20,9 +21,9 @@ const Logout = () => {
 
     return (
         <div >
+            
             <label >
-                <input  onChange={handleChange} type="checkbox" checked={checked}/>
-                
+                <input  onChange={handleChange} type="checkbox" checked={checked}/>                
             </label>
         </div>
     )

@@ -1,20 +1,48 @@
-.testDIV{
+.myclass-offer{
+	margin-top: 40px;
+    padding:20px;
+    text-align: center;   
+   /* 
     border: 2px solid red;
-    text-align: center;
-    display: inline-block;
-    margin: 5px;
-    padding: 5px;
-     
+    display:flex;	
+	justify-content:space-between;*/
 }
-.testDIV2{
-    display:flex;
-	flex-direction: row;
-	justify-content:space-between;
+.myclass-offer .imgVector{
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    border-top: 2px solid #99B219;
+    margin-bottom: 2px;
 }
-.btn{
-background-color: #f14848;
+.myclass-offer p{	
+ 	height: 50px;	
+}
+
+.myclass-offer .btn-success{
+/*background-color: #99B219;
+border: 2px solid #99B219;*/
 height: 30px;
-border: 2px solid brown;
-border-radius: 2%;
+border-radius: 10%;
+text-align: center;
+padding: 1px;
 
 }
+
+/*******************************************       Responsive   ******************************************/
+@media screen and (max-width:1023px){/*Desktop first then the tab screen*/
+   .myclass-offer p{	       
+        font-size: 14px;	
+    }
+   .myclass-offer .btn-success{	       
+    font-size: 14px;	
+   }
+} 
+@media screen and (max-width:768px){ /*	afetr the tab screen: comes the mobile screen */
+    .myclass-offer p{	       
+        font-size: 12px;	
+    }
+   .myclass-offer .btn-success{	       
+    font-size: 12px;	
+   }
+} 
+    

@@ -1,8 +1,9 @@
-.divFooter{
-    
+.footerP{
+    border: 2px solid red; 
+    text-align: center;  
     background-color:rgb(104, 168, 14);
     color:white;
-    height: 100px;
-    margin-top: 20px;    
-   
+    height: 100px;    
 }
+
+

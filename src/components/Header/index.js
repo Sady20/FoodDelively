@@ -1,11 +1,12 @@
 import React from 'react';
 import MyNav from './Mynav';
+import './header.css';
 
 
 function Header() {
     return (  
-        <div>
-                <div className='topBar'>
+        <div className='header '>
+                <div className='topBar '>
                     <div>
                         <span className='spanTopBar'><i className="fa fa-clock-o" aria-hidden="true"></i>Working hours: Mon-Sat 07h-19h</span>
                         <span><i className="fa fa-mobile" aria-hidden="true"></i>Call Us : +(212)  05666666</span>
@@ -17,7 +18,7 @@ function Header() {
                    </span>
                 </div>
                 
-                <MyNav/>                 
+                <MyNav />                 
         </div>        
             
     )

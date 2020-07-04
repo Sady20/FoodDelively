@@ -12,28 +12,41 @@ import Logout from '../Logout';
 import ForgetPassword from '../ForgetPassword';
 import Welcome from '../Welcome';
 
+import Restaurants from '../Restaurants';
+import Meals from '../Meals';
+import Services from '../Services';
+
 
   
 import './App.css';
 
 function App() {
   return (
+<div className="container-fluid">
     <Router >    
-      <Header/> 
-     <Switch>
+      <Header/>   
+      <Switch >
          <Route exact path="/" component={Landing} />
          <Route path="/about" component={About} />
          <Route path="/contact" component={Contact } />   
          <Route path="/signup" component={Signup} /> 
-         <Route path="/login" component={Login} />    
+         <Route path="/login" component={Login} /> 
+
          <Route path="/Welcome" component={Welcome} />    
          <Route path="/logout" component={Logout} />          
-         <Route path="/forgetpassword" component={ForgetPassword} />     
-         <Route component={Error} />
-   
-    </Switch>
-    <Footer/>    
+         <Route path="/forgetpassword" component={ForgetPassword} />  
+
+         <Route path="/restaurants" component={Restaurants} />
+         <Route path="/meals" component={Meals} />    
+         <Route path="/services" component={Services} />        
+
+
+         <Route component={Error} />   
+      </Switch>  
+      <Footer/>  
    </Router>
+</div>
+  
   );
 }
 

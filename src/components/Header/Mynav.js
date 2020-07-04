@@ -9,7 +9,7 @@ const Mynav=() =>{
     return (
         
             
-        <Navbar className='nav nav-links' collapseOnSelect expand="lg"  variant="dark">
+        <Navbar className='nav nav-links ' collapseOnSelect expand="lg"  variant="dark">
         <Navbar.Brand ><img  className='logo'  src={logo} alt="logo"   /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

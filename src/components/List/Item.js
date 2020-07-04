@@ -15,11 +15,7 @@ class Item extends Component{
         <p>{this.props.valueP}</p>
         <span>A partir de </span><br></br>
         <span>{this.props.valueSPAN2}</span><br></br>
-            
-        <button type="button" class="btn">
-            Check now!
-        </button>
-    </div>     
+   </div>     
    
     
 

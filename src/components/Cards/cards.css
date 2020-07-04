@@ -1,4 +1,20 @@
-.cardGroup{
-margin-top: 20px;
-margin-bottom: 20px;
+
+.CardHeader {
+  position: relative;
+}
+.cardHeaderImg{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 30px;
+  height: 30px;
+}
+.cardImg{
+  border: 2px solid red;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+.cardTest{
+    text-align: center;
 }
