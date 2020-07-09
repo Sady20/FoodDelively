@@ -1,7 +1,7 @@
 import myApp from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore'
-
+import firebasey from '../../firebase'
 const config = {
     apiKey: "AIzaSyDcWNlpikoEaVM4LHPEfVGeZriEKlOmrVU",
     authDomain: "reacttp1-ce9fa.firebaseapp.com",
@@ -15,9 +15,8 @@ const config = {
 
 export default class firebase{
 constructor(){
-    myApp.initializeApp(config);
-    this.auth = myApp.auth();
-    this.db = myApp.firestore();
+    this.auth = firebasey.auth();
+    this.db = firebasey.firestore();
 }
  // inscription
  signupUser = (email, password) => 
